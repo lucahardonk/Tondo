@@ -1,0 +1,16 @@
+# Use the official ROS2 Jazzy image as the base
+FROM ros:jazzy-ros-base
+
+# Set the working directory
+WORKDIR /ros2_ws
+
+RUN apt update && apt install -y \
+    nano \
+    && rm -rf /var/lib/apt/lists/*
+
+# Copy the entrypoint script
+COPY entrypoint.sh /entrypoint.sh
+
+# Set the entrypoint
+ENTRYPOINT ["/entrypoint.sh"]
+

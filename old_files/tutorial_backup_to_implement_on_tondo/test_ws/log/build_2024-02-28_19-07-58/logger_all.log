@@ -1,0 +1,258 @@
+[0.746s] DEBUG:colcon:Command line arguments: ['/usr/bin/colcon', 'build', '--symlink-install']
+[0.746s] DEBUG:colcon:Parsed command line arguments: Namespace(log_base=None, log_level=None, verb_name='build', build_base='build', install_base='install', merge_install=False, symlink_install=True, test_result_base=None, continue_on_error=False, executor='parallel', parallel_workers=20, event_handlers=None, ignore_user_meta=False, metas=['./colcon.meta'], base_paths=['.'], packages_ignore=None, packages_ignore_regex=None, paths=None, packages_up_to=None, packages_up_to_regex=None, packages_above=None, packages_above_and_dependencies=None, packages_above_depth=None, packages_select_by_dep=None, packages_skip_by_dep=None, packages_skip_up_to=None, packages_select_build_failed=False, packages_skip_build_finished=False, packages_select_test_failures=False, packages_skip_test_passed=False, packages_select=None, packages_skip=None, packages_select_regex=None, packages_skip_regex=None, packages_start=None, packages_end=None, allow_overriding=[], cmake_args=None, cmake_target=None, cmake_target_skip_unavailable=False, cmake_clean_cache=False, cmake_clean_first=False, cmake_force_configure=False, ament_cmake_args=None, catkin_cmake_args=None, catkin_skip_building_tests=False, verb_parser=<colcon_defaults.argument_parser.defaults.DefaultArgumentsDecorator object at 0x7fb1c8fe6050>, verb_extension=<colcon_core.verb.build.BuildVerb object at 0x7fb1c8fadc60>, main=<bound method BuildVerb.main of <colcon_core.verb.build.BuildVerb object at 0x7fb1c8fadc60>>)
+[0.779s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) check parameters
+[0.779s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) check parameters
+[0.779s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) check parameters
+[0.779s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) check parameters
+[0.779s] Level 1:colcon.colcon_core.package_discovery:discover_packages(colcon_meta) discover
+[0.779s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) discover
+[0.779s] INFO:colcon.colcon_core.package_discovery:Crawling recursively for packages in '/home/ubuquanta/test_ws'
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ignore', 'ignore_ament_install']
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore'
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ignore_ament_install'
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_pkg']
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_pkg'
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['colcon_meta']
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'colcon_meta'
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['ros']
+[0.779s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'ros'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['cmake', 'python']
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'cmake'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extensions ['python_setup_py']
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(.) by extension 'python_setup_py'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extensions ['ignore', 'ignore_ament_install']
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(build) by extension 'ignore'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(build) ignored
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extensions ['ignore', 'ignore_ament_install']
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(install) by extension 'ignore'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(install) ignored
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extensions ['ignore', 'ignore_ament_install']
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(log) by extension 'ignore'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(log) ignored
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ignore', 'ignore_ament_install']
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ignore_ament_install'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_pkg']
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_pkg'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['colcon_meta']
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'colcon_meta'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['ros']
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'ros'
+[0.788s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['cmake', 'python']
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'cmake'
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python'
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extensions ['python_setup_py']
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src) by extension 'python_setup_py'
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_package1) by extensions ['ignore', 'ignore_ament_install']
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_package1) by extension 'ignore'
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_package1) by extension 'ignore_ament_install'
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_package1) by extensions ['colcon_pkg']
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_package1) by extension 'colcon_pkg'
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_package1) by extensions ['colcon_meta']
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_package1) by extension 'colcon_meta'
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_package1) by extensions ['ros']
+[0.789s] Level 1:colcon.colcon_core.package_identification:_identify(src/test_package1) by extension 'ros'
+[0.791s] DEBUG:colcon.colcon_core.package_identification:Package 'src/test_package1' with type 'ros.ament_python' and name 'test_package1'
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_bringup) by extensions ['ignore', 'ignore_ament_install']
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_bringup) by extension 'ignore'
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_bringup) by extension 'ignore_ament_install'
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_bringup) by extensions ['colcon_pkg']
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_bringup) by extension 'colcon_pkg'
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_bringup) by extensions ['colcon_meta']
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_bringup) by extension 'colcon_meta'
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_bringup) by extensions ['ros']
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_bringup) by extension 'ros'
+[0.791s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tondo_bringup' with type 'ros.ament_cmake' and name 'tondo_bringup'
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_description) by extensions ['ignore', 'ignore_ament_install']
+[0.791s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_description) by extension 'ignore'
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_description) by extension 'ignore_ament_install'
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_description) by extensions ['colcon_pkg']
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_description) by extension 'colcon_pkg'
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_description) by extensions ['colcon_meta']
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_description) by extension 'colcon_meta'
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_description) by extensions ['ros']
+[0.792s] Level 1:colcon.colcon_core.package_identification:_identify(src/tondo_description) by extension 'ros'
+[0.792s] DEBUG:colcon.colcon_core.package_identification:Package 'src/tondo_description' with type 'ros.ament_cmake' and name 'tondo_description'
+[0.792s] Level 1:colcon.colcon_core.package_discovery:discover_packages(recursive) using defaults
+[0.792s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) discover
+[0.792s] Level 1:colcon.colcon_core.package_discovery:discover_packages(ignore) using defaults
+[0.792s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) discover
+[0.792s] Level 1:colcon.colcon_core.package_discovery:discover_packages(path) using defaults
+[0.855s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) check parameters
+[0.856s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) discover
+[0.877s] DEBUG:colcon.colcon_installed_package_information.package_discovery:Found 403 installed packages in /opt/ros/humble
+[0.879s] Level 1:colcon.colcon_core.package_discovery:discover_packages(prefix_path) using defaults
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'test_package1' build argument 'cmake_args' from command line to 'None'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'test_package1' build argument 'cmake_target' from command line to 'None'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'test_package1' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'test_package1' build argument 'cmake_clean_cache' from command line to 'False'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'test_package1' build argument 'cmake_clean_first' from command line to 'False'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'test_package1' build argument 'cmake_force_configure' from command line to 'False'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'test_package1' build argument 'ament_cmake_args' from command line to 'None'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'test_package1' build argument 'catkin_cmake_args' from command line to 'None'
+[0.970s] Level 5:colcon.colcon_core.verb:set package 'test_package1' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.970s] DEBUG:colcon.colcon_core.verb:Building package 'test_package1' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuquanta/test_ws/build/test_package1', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuquanta/test_ws/install/test_package1', 'merge_install': False, 'path': '/home/ubuquanta/test_ws/src/test_package1', 'symlink_install': True, 'test_result_base': None}
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'tondo_description' build argument 'cmake_args' from command line to 'None'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'tondo_description' build argument 'cmake_target' from command line to 'None'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'tondo_description' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'tondo_description' build argument 'cmake_clean_cache' from command line to 'False'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'tondo_description' build argument 'cmake_clean_first' from command line to 'False'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'tondo_description' build argument 'cmake_force_configure' from command line to 'False'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'tondo_description' build argument 'ament_cmake_args' from command line to 'None'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'tondo_description' build argument 'catkin_cmake_args' from command line to 'None'
+[0.980s] Level 5:colcon.colcon_core.verb:set package 'tondo_description' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.980s] DEBUG:colcon.colcon_core.verb:Building package 'tondo_description' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuquanta/test_ws/build/tondo_description', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuquanta/test_ws/install/tondo_description', 'merge_install': False, 'path': '/home/ubuquanta/test_ws/src/tondo_description', 'symlink_install': True, 'test_result_base': None}
+[0.990s] Level 5:colcon.colcon_core.verb:set package 'tondo_bringup' build argument 'cmake_args' from command line to 'None'
+[0.990s] Level 5:colcon.colcon_core.verb:set package 'tondo_bringup' build argument 'cmake_target' from command line to 'None'
+[0.990s] Level 5:colcon.colcon_core.verb:set package 'tondo_bringup' build argument 'cmake_target_skip_unavailable' from command line to 'False'
+[0.990s] Level 5:colcon.colcon_core.verb:set package 'tondo_bringup' build argument 'cmake_clean_cache' from command line to 'False'
+[0.990s] Level 5:colcon.colcon_core.verb:set package 'tondo_bringup' build argument 'cmake_clean_first' from command line to 'False'
+[0.990s] Level 5:colcon.colcon_core.verb:set package 'tondo_bringup' build argument 'cmake_force_configure' from command line to 'False'
+[0.990s] Level 5:colcon.colcon_core.verb:set package 'tondo_bringup' build argument 'ament_cmake_args' from command line to 'None'
+[0.990s] Level 5:colcon.colcon_core.verb:set package 'tondo_bringup' build argument 'catkin_cmake_args' from command line to 'None'
+[0.990s] Level 5:colcon.colcon_core.verb:set package 'tondo_bringup' build argument 'catkin_skip_building_tests' from command line to 'False'
+[0.990s] DEBUG:colcon.colcon_core.verb:Building package 'tondo_bringup' with the following arguments: {'ament_cmake_args': None, 'build_base': '/home/ubuquanta/test_ws/build/tondo_bringup', 'catkin_cmake_args': None, 'catkin_skip_building_tests': False, 'cmake_args': None, 'cmake_clean_cache': False, 'cmake_clean_first': False, 'cmake_force_configure': False, 'cmake_target': None, 'cmake_target_skip_unavailable': False, 'install_base': '/home/ubuquanta/test_ws/install/tondo_bringup', 'merge_install': False, 'path': '/home/ubuquanta/test_ws/src/tondo_bringup', 'symlink_install': True, 'test_result_base': None}
+[1.000s] INFO:colcon.colcon_core.executor:Executing jobs using 'parallel' executor
+[1.011s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete
+[1.011s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuquanta/test_ws/src/tondo_description' with build type 'ament_cmake'
+[1.011s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuquanta/test_ws/src/tondo_description'
+[1.023s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_core.shell.bat': Not used on non-Windows systems
+[1.023s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.023s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.046s] INFO:colcon.colcon_ros.task.ament_python.build:Building ROS package in '/home/ubuquanta/test_ws/src/test_package1' with build type 'ament_python'
+[1.046s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_package1', 'ament_prefix_path')
+[1.056s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/hook/ament_prefix_path.ps1'
+[1.057s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/hook/ament_prefix_path.dsv'
+[1.057s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/hook/ament_prefix_path.sh'
+[1.067s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.068s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[1.094s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuquanta/test_ws/build/tondo_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ubuquanta/test_ws/src/tondo_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuquanta/test_ws/install/tondo_description
+[1.412s] INFO:colcon.colcon_core.task.python.build:Building Python package in '/home/ubuquanta/test_ws/src/test_package1'
+[1.446s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[1.446s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[2.068s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuquanta/test_ws/build/test_package1': PYTHONPATH=/home/ubuquanta/test_ws/build/test_package1/prefix_override:/home/ubuquanta/test_ws/install/test_package1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuquanta/test_ws/build/test_package1/build --no-deps install_data
+[2.367s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuquanta/test_ws/build/tondo_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake /home/ubuquanta/test_ws/src/tondo_description -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuquanta/test_ws/install/tondo_description
+[2.371s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuquanta/test_ws/build/tondo_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuquanta/test_ws/build/tondo_description -- -j20 -l20
+[2.456s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuquanta/test_ws/build/tondo_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --build /home/ubuquanta/test_ws/build/tondo_description -- -j20 -l20
+[2.496s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_package1', 'pythonpath_develop')
+[2.497s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuquanta/test_ws/build/test_package1' returned '0': PYTHONPATH=/home/ubuquanta/test_ws/build/test_package1/prefix_override:/home/ubuquanta/test_ws/install/test_package1/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 setup.py develop --editable --build-directory /home/ubuquanta/test_ws/build/test_package1/build --no-deps install_data
+[2.533s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/build/test_package1/share/test_package1/hook/pythonpath_develop.ps1'
+[2.533s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuquanta/test_ws/build/test_package1/share/test_package1/hook/pythonpath_develop.dsv'
+[2.534s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/build/test_package1/share/test_package1/hook/pythonpath_develop.sh'
+[2.565s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/test_package1' for CMake module files
+[2.566s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/test_package1' for CMake config files
+[2.566s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/test_package1/lib'
+[2.567s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/test_package1/bin'
+[2.567s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/test_package1/lib/pkgconfig/test_package1.pc'
+[2.567s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/test_package1/lib/python3.10/site-packages'
+[2.567s] Level 1:colcon.colcon_core.shell:create_environment_hook('test_package1', 'pythonpath')
+[2.590s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/hook/pythonpath.ps1'
+[2.591s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/hook/pythonpath.dsv'
+[2.591s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/hook/pythonpath.sh'
+[2.592s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/test_package1/bin'
+[2.592s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(test_package1)
+[2.613s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/package.ps1'
+[2.614s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/package.dsv'
+[2.615s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/package.sh'
+[2.616s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/package.bash'
+[2.617s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/test_package1/share/test_package1/package.zsh'
+[2.618s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuquanta/test_ws/install/test_package1/share/colcon-core/packages/test_package1)
+[2.635s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuquanta/test_ws/build/tondo_description': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuquanta/test_ws/build/tondo_description
+[3.142s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tondo_description)
+[3.143s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuquanta/test_ws/build/tondo_description' returned '0': CMAKE_PREFIX_PATH=/opt/ros/humble /usr/bin/cmake --install /home/ubuquanta/test_ws/build/tondo_description
+[3.179s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description' for CMake module files
+[3.180s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description' for CMake config files
+[3.180s] Level 1:colcon.colcon_core.shell:create_environment_hook('tondo_description', 'cmake_prefix_path')
+[3.208s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/hook/cmake_prefix_path.ps1'
+[3.209s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/hook/cmake_prefix_path.dsv'
+[3.209s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/hook/cmake_prefix_path.sh'
+[3.210s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description/bin'
+[3.210s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description/lib/pkgconfig/tondo_description.pc'
+[3.211s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description/lib/python3.10/site-packages'
+[3.211s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description/bin'
+[3.235s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.ps1'
+[3.236s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.dsv'
+[3.236s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.sh'
+[3.237s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.bash'
+[3.237s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.zsh'
+[3.237s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuquanta/test_ws/install/tondo_description/share/colcon-core/packages/tondo_description)
+[3.323s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tondo_description)
+[3.351s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description' for CMake module files
+[3.352s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description' for CMake config files
+[3.352s] Level 1:colcon.colcon_core.shell:create_environment_hook('tondo_description', 'cmake_prefix_path')
+[3.375s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/hook/cmake_prefix_path.ps1'
+[3.376s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/hook/cmake_prefix_path.dsv'
+[3.376s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/hook/cmake_prefix_path.sh'
+[3.377s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description/bin'
+[3.377s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description/lib/pkgconfig/tondo_description.pc'
+[3.378s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description/lib/python3.10/site-packages'
+[3.378s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_description/bin'
+[3.399s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.ps1'
+[3.399s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.dsv'
+[3.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.sh'
+[3.400s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.bash'
+[3.401s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_description/share/tondo_description/package.zsh'
+[3.401s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuquanta/test_ws/install/tondo_description/share/colcon-core/packages/tondo_description)
+[3.402s] INFO:colcon.colcon_ros.task.ament_cmake.build:Building ROS package in '/home/ubuquanta/test_ws/src/tondo_bringup' with build type 'ament_cmake'
+[3.402s] INFO:colcon.colcon_cmake.task.cmake.build:Building CMake package in '/home/ubuquanta/test_ws/src/tondo_bringup'
+[3.423s] INFO:colcon.colcon_core.shell:Skip shell extension 'powershell' for command environment: Not usable outside of PowerShell
+[3.423s] DEBUG:colcon.colcon_core.shell:Skip shell extension 'dsv' for command environment
+[3.469s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuquanta/test_ws/build/tondo_bringup': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake /home/ubuquanta/test_ws/src/tondo_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuquanta/test_ws/install/tondo_bringup
+[4.814s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuquanta/test_ws/build/tondo_bringup' returned '0': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake /home/ubuquanta/test_ws/src/tondo_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuquanta/test_ws/install/tondo_bringup
+[4.816s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuquanta/test_ws/build/tondo_bringup': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake --build /home/ubuquanta/test_ws/build/tondo_bringup -- -j20 -l20
+[4.908s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuquanta/test_ws/build/tondo_bringup' returned '0': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake --build /home/ubuquanta/test_ws/build/tondo_bringup -- -j20 -l20
+[4.965s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoking command in '/home/ubuquanta/test_ws/build/tondo_bringup': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake --install /home/ubuquanta/test_ws/build/tondo_bringup
+[5.401s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tondo_bringup)
+[5.403s] DEBUG:colcon.colcon_core.event_handler.log_command:Invoked command in '/home/ubuquanta/test_ws/build/tondo_bringup' returned '0': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake --install /home/ubuquanta/test_ws/build/tondo_bringup
+[5.437s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup' for CMake module files
+[5.438s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup' for CMake config files
+[5.439s] Level 1:colcon.colcon_core.shell:create_environment_hook('tondo_bringup', 'cmake_prefix_path')
+[5.466s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/hook/cmake_prefix_path.ps1'
+[5.467s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/hook/cmake_prefix_path.dsv'
+[5.467s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/hook/cmake_prefix_path.sh'
+[5.468s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup/bin'
+[5.468s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup/lib/pkgconfig/tondo_bringup.pc'
+[5.468s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup/lib/python3.10/site-packages'
+[5.469s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup/bin'
+[5.492s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.ps1'
+[5.493s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.dsv'
+[5.493s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.sh'
+[5.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.bash'
+[5.494s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.zsh'
+[5.494s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuquanta/test_ws/install/tondo_bringup/share/colcon-core/packages/tondo_bringup)
+[5.574s] Level 1:colcon.colcon_core.environment:create_environment_scripts_only(tondo_bringup)
+[5.602s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup' for CMake module files
+[5.603s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup' for CMake config files
+[5.603s] Level 1:colcon.colcon_core.shell:create_environment_hook('tondo_bringup', 'cmake_prefix_path')
+[5.627s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/hook/cmake_prefix_path.ps1'
+[5.628s] INFO:colcon.colcon_core.shell:Creating environment descriptor '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/hook/cmake_prefix_path.dsv'
+[5.629s] INFO:colcon.colcon_core.shell:Creating environment hook '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/hook/cmake_prefix_path.sh'
+[5.629s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup/bin'
+[5.630s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup/lib/pkgconfig/tondo_bringup.pc'
+[5.630s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup/lib/python3.10/site-packages'
+[5.630s] Level 1:colcon.colcon_core.environment:checking '/home/ubuquanta/test_ws/install/tondo_bringup/bin'
+[5.651s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.ps1'
+[5.652s] INFO:colcon.colcon_core.shell:Creating package descriptor '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.dsv'
+[5.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.sh'
+[5.653s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.bash'
+[5.654s] INFO:colcon.colcon_core.shell:Creating package script '/home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.zsh'
+[5.654s] Level 1:colcon.colcon_core.environment:create_file_with_runtime_dependencies(/home/ubuquanta/test_ws/install/tondo_bringup/share/colcon-core/packages/tondo_bringup)
+[5.655s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:closing loop
+[5.655s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:loop closed
+[5.655s] DEBUG:colcon.colcon_parallel_executor.executor.parallel:run_until_complete finished with '0'
+[5.655s] DEBUG:colcon.colcon_core.event_reactor:joining thread
+[5.687s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.terminal_notifier': Not used on non-Darwin systems
+[5.688s] INFO:colcon.colcon_core.plugin_system:Skipping extension 'colcon_notification.desktop_notification.win32': Not used on non-Windows systems
+[5.688s] INFO:colcon.colcon_notification.desktop_notification:Sending desktop notification using 'notify2'
+[5.712s] DEBUG:colcon.colcon_core.event_reactor:joined thread
+[5.744s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuquanta/test_ws/install/local_setup.ps1'
+[5.746s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuquanta/test_ws/install/_local_setup_util_ps1.py'
+[5.749s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuquanta/test_ws/install/setup.ps1'
+[5.779s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuquanta/test_ws/install/local_setup.sh'
+[5.780s] INFO:colcon.colcon_core.shell:Creating prefix util module '/home/ubuquanta/test_ws/install/_local_setup_util_sh.py'
+[5.781s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuquanta/test_ws/install/setup.sh'
+[5.820s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuquanta/test_ws/install/local_setup.bash'
+[5.821s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuquanta/test_ws/install/setup.bash'
+[5.853s] INFO:colcon.colcon_core.shell:Creating prefix script '/home/ubuquanta/test_ws/install/local_setup.zsh'
+[5.854s] INFO:colcon.colcon_core.shell:Creating prefix chain script '/home/ubuquanta/test_ws/install/setup.zsh'

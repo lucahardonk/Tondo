@@ -1,0 +1,45 @@
+[0.065s] Invoking command in '/home/ubuquanta/test_ws/build/tondo_bringup': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake /home/ubuquanta/test_ws/src/tondo_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuquanta/test_ws/install/tondo_bringup
+[0.197s] -- The C compiler identification is GNU 11.4.0
+[0.334s] -- The CXX compiler identification is GNU 11.4.0
+[0.353s] -- Detecting C compiler ABI info
+[0.522s] -- Detecting C compiler ABI info - done
+[0.543s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.543s] -- Detecting C compile features
+[0.545s] -- Detecting C compile features - done
+[0.552s] -- Detecting CXX compiler ABI info
+[0.739s] -- Detecting CXX compiler ABI info - done
+[0.760s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.761s] -- Detecting CXX compile features
+[0.762s] -- Detecting CXX compile features - done
+[0.767s] -- Found ament_cmake: 1.3.8 (/opt/ros/humble/share/ament_cmake/cmake)
+[1.127s] -- Found Python3: /usr/bin/python3 (found version "3.10.12") found components: Interpreter 
+[1.256s] -- Override CMake install command with custom implementation using symlinks instead of copying resources
+[1.399s] -- Configuring done
+[1.402s] -- Generating done
+[1.403s] -- Build files have been written to: /home/ubuquanta/test_ws/build/tondo_bringup
+[1.410s] Invoked command in '/home/ubuquanta/test_ws/build/tondo_bringup' returned '0': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake /home/ubuquanta/test_ws/src/tondo_bringup -DAMENT_CMAKE_SYMLINK_INSTALL=1 -DCMAKE_INSTALL_PREFIX=/home/ubuquanta/test_ws/install/tondo_bringup
+[1.412s] Invoking command in '/home/ubuquanta/test_ws/build/tondo_bringup': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake --build /home/ubuquanta/test_ws/build/tondo_bringup -- -j20 -l20
+[1.504s] Invoked command in '/home/ubuquanta/test_ws/build/tondo_bringup' returned '0': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake --build /home/ubuquanta/test_ws/build/tondo_bringup -- -j20 -l20
+[1.561s] Invoking command in '/home/ubuquanta/test_ws/build/tondo_bringup': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake --install /home/ubuquanta/test_ws/build/tondo_bringup
+[1.579s] -- Install configuration: ""
+[1.581s] -- Execute custom install script
+[1.582s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup//launch/tondo_gazebo.launch.xml
+[1.604s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup//rviz/rviz_config.rviz
+[1.626s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup//worlds/test_world.gazebo
+[1.648s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup//worlds/test_world.world
+[1.669s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/ament_index/resource_index/package_run_dependencies/tondo_bringup
+[1.691s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/ament_index/resource_index/parent_prefix_path/tondo_bringup
+[1.713s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/environment/ament_prefix_path.sh
+[1.734s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/environment/ament_prefix_path.dsv
+[1.756s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/environment/path.sh
+[1.777s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/environment/path.dsv
+[1.799s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/local_setup.bash
+[1.821s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/local_setup.sh
+[1.843s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/local_setup.zsh
+[1.864s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/local_setup.dsv
+[1.886s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.dsv
+[1.908s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/ament_index/resource_index/packages/tondo_bringup
+[1.929s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/cmake/tondo_bringupConfig.cmake
+[1.951s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/cmake/tondo_bringupConfig-version.cmake
+[1.973s] -- Symlinking: /home/ubuquanta/test_ws/install/tondo_bringup/share/tondo_bringup/package.xml
+[1.999s] Invoked command in '/home/ubuquanta/test_ws/build/tondo_bringup' returned '0': AMENT_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/ubuquanta/test_ws/install/tondo_description:/opt/ros/humble /usr/bin/cmake --install /home/ubuquanta/test_ws/build/tondo_bringup

@@ -1,0 +1,1 @@
+install a tts node with ros and check the process name if it's running, change the aniamtion accordingly

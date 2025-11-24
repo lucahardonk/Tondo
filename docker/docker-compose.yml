@@ -1,0 +1,170 @@
+networks:
+  tondo_wifi_ipvlan:
+    external: true
+  tondo_bridge:
+    external: true
+
+services:
+  tondo_base_image:
+    build:
+      context: .
+      dockerfile: Dockerfile.base
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    image: tondo_docker_image:latest
+    container_name: tondo_base_container
+    networks:
+      - tondo_bridge
+    user: "${USER_UID:-1000}:${USER_GID:-1000}"
+    environment:
+      - USER_UID=${USER_UID:-1000}
+      - USER_GID=${USER_GID:-1000}
+
+  talker_container:
+    build:
+      context: .
+      dockerfile: Dockerfile.talker
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    image: ros2_talker_image:latest
+    container_name: ros2_talker_test_container
+    networks:
+      - tondo_bridge
+    stdin_open: false
+    tty: false
+    volumes:
+      - ../ros2_ws/src:/ros2_ws/src
+    depends_on:
+      - tondo_base_image
+    user: "${USER_UID:-1000}:${USER_GID:-1000}"
+    environment:
+      - USER_UID=${USER_UID:-1000}
+      - USER_GID=${USER_GID:-1000}
+
+  joystick_container:
+    build:
+      context: .
+      dockerfile: Dockerfile.joystick
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    image: ros2_joystick_image:latest
+    container_name: ros2_joystick_container
+    networks:
+      - tondo_bridge
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../ros2_ws/src:/ros2_ws/src
+    group_add:
+      - dialout
+      - "995"
+    devices:
+      - /dev/input/js0:/dev/input/js0  # Bind the joystick device
+    privileged: true
+    depends_on:
+      - tondo_base_image
+    user: "${USER_UID:-1000}:${USER_GID:-1000}"
+    environment:
+      - USER_UID=${USER_UID:-1000}
+      - USER_GID=${USER_GID:-1000}
+
+  rplidar_container:
+    build:
+      context: .
+      dockerfile: Dockerfile.rplidar
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    image: ros2_rplidar_image:latest
+    container_name: ros2_rplidar_container
+    networks:
+      - tondo_bridge
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../ros2_ws/src:/ros2_ws/src
+    devices:
+      - /dev/serial/by-id/usb-Silicon_Labs_CP2102_USB_to_UART_Bridge_Controller_0001-if00-port0:/dev/ttyUSB1  # Bind the LIDAR device
+    privileged: true
+    group_add:
+      - dialout
+    depends_on:
+      - tondo_base_image
+    user: "${USER_UID:-1000}:${USER_GID:-1000}"
+    environment:
+      - USER_UID=${USER_UID:-1000}
+      - USER_GID=${USER_GID:-1000}
+
+  odrive_container:
+    build:
+      context: .
+      dockerfile: Dockerfile.odrive
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    image: ros2_odrive_image:latest
+    container_name: ros2_odrive_container
+    networks:
+      - tondo_bridge
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../ros2_ws/src:/ros2_ws/src
+    group_add:
+      - dialout
+    devices:
+      - /dev/ttyACM0:/dev/ttyUSB0
+    privileged: true
+    user: "${USER_UID:-1000}:${USER_GID:-1000}"
+    environment:
+      - USER_UID=${USER_UID:-1000}
+      - USER_GID=${USER_GID:-1000}
+
+
+  diff_drive_container:
+    build:
+      context: .
+      dockerfile: Dockerfile.ros2_diff_drive
+      args:
+        USER_UID: ${USER_UID:-1000}
+        USER_GID: ${USER_GID:-1000}
+    image: ros2_diff_drive_image:latest
+    container_name: ros2_diff_drive_container
+    networks:
+      - tondo_bridge
+    stdin_open: true
+    tty: true
+    volumes:
+      - ../ros2_ws/src:/ros2_ws/src
+    privileged: true
+    user: "${USER_UID:-1000}:${USER_GID:-1000}"
+    environment:
+      - USER_UID=${USER_UID:-1000}
+      - USER_GID=${USER_GID:-1000}
+
+  ros2_tondo_description_container:
+      build:
+        context: .
+        dockerfile: Dockerfile.tondo_description
+        args:
+          USER_UID: ${USER_UID:-1000}
+          USER_GID: ${USER_GID:-1000}
+      image: ros2_tondo_description_image:latest
+      container_name: ros2_tondo_description_container
+      networks:
+        - tondo_bridge
+      stdin_open: true
+      tty: true
+      group_add:
+        - dialout
+        - "995"
+      volumes:
+        - ../ros2_ws/src:/ros2_ws/src
+      privileged: true
+      user: "${USER_UID:-1000}:${USER_GID:-1000}"
+      environment:
+        - USER_UID=${USER_UID:-1000}
+        - USER_GID=${USER_GID:-1000}

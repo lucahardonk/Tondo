@@ -1,0 +1,47 @@
+# Use ROS 2 Humble base image
+FROM ros:humble-ros-base
+
+
+# Set working directory
+WORKDIR /ros2_ws
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    python3-pip \
+    python3-usb \
+    python3-serial \
+    udev \
+    curl \
+    && rm -rf /var/lib/apt/lists/*
+
+# Install ODrive tool
+RUN pip3 install --no-cache-dir odrive==0.5.1
+
+# Setup ROS 2 environment
+RUN echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc
+
+# Set build arguments for user creation
+ARG USERNAME=ubuntu
+ARG USER_UID=1000
+ARG USER_GID=1000
+
+
+# Create non-root user
+RUN groupadd --gid $USER_GID $USERNAME \
+    && useradd --uid $USER_UID --gid $USER_GID -m -s /bin/bash $USERNAME \
+    && mkdir -p /ros2_ws/src \
+    && chown -R $USERNAME:$USERNAME /ros2_ws
+
+# Create udev rules for ODrive
+RUN echo 'SUBSYSTEMS=="usb", ATTRS{idVendor}=="1209", ATTRS{idProduct}=="0d32", MODE="0666"' > /etc/udev/rules.d/99-odrive.rules
+
+# Switch to the new user
+USER $USERNAME
+WORKDIR /ros2_ws
+
+RUN /bin/bash -c "source /opt/ros/humble/setup.bash && colcon build"
+
+# Ensure the workspace is sourced at runtime
+CMD ["/bin/bash", "-c", "source /opt/ros/humble/setup.bash && colcon build --packages-select odrive_pkg && source /opt/ros/humble/setup.bash && source install/setup.bash && ros2 run odrive_pkg odrive_vel_control_node"]
+
+#CMD ["/bin/bash"]

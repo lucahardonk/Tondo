@@ -1,0 +1,114 @@
+ers::_1));
+        publisher_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/data/corrected", 1);
+    }
+
+private:
+    void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg) {
+    // Modify angular velocity values
+    sensor_msgs::msg::Imu corrected_msg = *msg;
+    corrected_msg.angular_velocity.x = msg->angular_velocity.x;
+    corrected_msg.angular_velocity.y = msg->angular_velocity.z;
+    corrected_msg.angular_velocity.z = -msg->angular_velocity.y;
+
+    // Modify linear acceleration values
+    corrected_msg.linear_acceleration.x = msg->linear_acceleration.x;
+    corrected_msg.linear_acceleration.y = msg->linear_acceleration.z;
+    corrected_msg.linear_acceleration.z = -10;// msg->linear_acceleration.y;
+
+    // Publish corrected IMU data
+    publisher_->publish(corrected_msg);
+}
+
+    rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_;
+    rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr publisher_;
+};
+
+int main(int argc, char* argv[]) {
+    rclcpp::init(argc, argv);
+    auto imu_correction_node = std::make_shared<IMUCorrectionNode>();
+    rclcpp::spin(imu_correction_node);
+    rclcpp::shutdown();
+    return 0;
+}
+#include "rclcpp/rclcpp.hpp"
+#include "sensor_msgs/msg/imu.hpp"
+#include "geometry_msgs/msg/vector3.hpp" // Include Vector3 header
+
+class IMUCorrectionNode : public rclcpp::Node {
+public:
+    IMUCorrectionNode() : Node("imu_correction_node") {
+        subscription_ = this->create_subscription<sensor_msgs::msg::Imu>(
+            "/imu/data", 1, std::bind(&IMUCorrectionNode::imu_callback, this, std::placeholders::_1));
+        publisher_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/data/corrected", 1);
+    }
+
+private:
+    void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg) {
+        // Modify angular velocity values
+        sensor_msgs::msg::Imu corrected_msg = *msg;
+        corrected_msg.angular_velocity.x = msg->angular_velocity.x;
+        corrected_msg.angular_velocity.y = msg->angular_velocity.z;
+        corrected_msg.angular_velocity.z = -msg->angular_velocity.y;
+
+        // Modify linear acceleration values
+        geometry_msgs::msg::Vector3 linear_acceleration;
+        linear_acceleration.x = msg->linear_acceleration.x;
+        linear_acceleration.y = msg->linear_acceleration.z;
+        linear_acceleration.z = -10; // Assign -10 to the z-component
+
+        corrected_msg.linear_acceleration = linear_acceleration; // Assign the corrected linear acceleration
+
+        // Publish corrected IMU data
+        publisher_->publish(corrected_msg);
+    }
+
+    rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_;
+    rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr publisher_;
+};
+
+int main(int argc, char* argv[]) {
+    rclcpp::init(argc, argv);
+    auto imu_correction_node = std::make_shared<IMUCorrecti#include "rclcpp/rclcpp.hpp"
+#include "sensor_msgs/msg/imu.hpp"
+#include "geometry_msgs/msg/vector3.hpp" // Include Vector3 header
+
+class IMUCorrectionNode : public rclcpp::Node {
+public:
+    IMUCorrectionNode() : Node("imu_correction_node") {
+        subscription_ = this->create_subscription<sensor_msgs::msg::Imu>(
+            "/imu/data", 1, std::bind(&IMUCorrectionNode::imu_callback, this, std::placeholders::_1));
+        publisher_ = this->create_publisher<sensor_msgs::msg::Imu>("/imu/data/corrected", 1);
+    }
+
+private:
+    void imu_callback(const sensor_msgs::msg::Imu::SharedPtr msg) {
+        // Modify angular velocity values
+        sensor_msgs::msg::Imu corrected_msg = *msg;
+        corrected_msg.angular_velocity.x = msg->angular_velocity.x;
+        corrected_msg.angular_velocity.y = msg->angular_velocity.z;
+        corrected_msg.angular_velocity.z = -msg->angular_velocity.y;
+
+        // Modify linear acceleration values
+        geometry_msgs::msg::Vector3 linear_acceleration;
+        linear_acceleration.x = msg->linear_acceleration.x;
+        linear_acceleration.y = msg->linear_acceleration.z;
+        linear_acceleration.z = -10; // Assign -10 to the z-component
+
+        corrected_msg.linear_acceleration = linear_acceleration; // Assign the corrected linear acceleration
+
+        // Publish corrected IMU data
+        publisher_->publish(corrected_msg);
+    }
+
+    rclcpp::Subscription<sensor_msgs::msg::Imu>::SharedPtr subscription_;
+    rclcpp::Publisher<sensor_msgs::msg::Imu>::SharedPtr publisher_;
+};
+
+int main(int argc, char* argv[]) {
+    rclcpp::init(argc, argv);
+    auto imu_correction_node = std::make_shared<IMUCorrectionNode>();
+    rclcpp::spin(imu_correction_node);
+    rclcpp::shutdown();
+    return 0;
+}
+

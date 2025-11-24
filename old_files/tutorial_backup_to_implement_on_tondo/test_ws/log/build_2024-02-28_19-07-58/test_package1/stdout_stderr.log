@@ -1,0 +1,22 @@
+running develop
+running egg_info
+creating test_package1.egg-info
+writing test_package1.egg-info/PKG-INFO
+writing dependency_links to test_package1.egg-info/dependency_links.txt
+writing entry points to test_package1.egg-info/entry_points.txt
+writing requirements to test_package1.egg-info/requires.txt
+writing top-level names to test_package1.egg-info/top_level.txt
+writing manifest file 'test_package1.egg-info/SOURCES.txt'
+reading manifest file 'test_package1.egg-info/SOURCES.txt'
+writing manifest file 'test_package1.egg-info/SOURCES.txt'
+running build_ext
+Creating /home/ubuquanta/test_ws/install/test_package1/lib/python3.10/site-packages/test-package1.egg-link (link to .)
+Installing test_node script to /home/ubuquanta/test_ws/install/test_package1/lib/test_package1
+
+Installed /home/ubuquanta/test_ws/build/test_package1
+running install_data
+creating /home/ubuquanta/test_ws/install/test_package1/share/ament_index
+creating /home/ubuquanta/test_ws/install/test_package1/share/ament_index/resource_index
+creating /home/ubuquanta/test_ws/install/test_package1/share/ament_index/resource_index/packages
+copying resource/test_package1 -> /home/ubuquanta/test_ws/install/test_package1/share/ament_index/resource_index/packages
+copying package.xml -> /home/ubuquanta/test_ws/install/test_package1/share/test_package1

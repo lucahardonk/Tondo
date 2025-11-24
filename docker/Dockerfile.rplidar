@@ -1,0 +1,36 @@
+# Use the created base image
+FROM tondo_docker_image:latest
+
+# Set the working directory
+WORKDIR /ros2_ws
+
+# Install RPLidar ROS package and dependencies
+RUN apt-get update && apt-get install -y \
+    ros-jazzy-rplidar-ros \
+    && rm -rf /var/lib/apt/lists/*
+
+# Grant root user access to serial devices (if needed)
+RUN usermod -a -G dialout root
+
+# Copy the entrypoint script
+COPY entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+# Use build arguments for UID and GID
+ARG USER_UID=1000
+ARG USER_GID=1000
+
+# Modify the existing 'ubuntu' user to match the host's UID and GID
+RUN usermod -u $USER_UID -g $USER_GID ubuntu && \
+    groupmod -g $USER_GID ubuntu && \
+    chown -R ubuntu:ubuntu /ros2_ws
+
+# Switch to the existing user
+USER ubuntu
+
+# Set the default command to run RPLidar with correct parameters
+CMD ["ros2", "run", "rplidar_ros", "rplidar_composition", "--ros-args", \
+     "-p", "serial_port:=/dev/ttyUSB1", \
+     "-p", "frame_id:=lidar_link", \
+     "-p", "angle_compensate:=true", \
+     "-p", "scan_mode:=Standard"]
