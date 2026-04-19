@@ -1,0 +1,24 @@
+cat << 'EOF' > .gitignore
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+.executable/
+
+# Docker
+.docker_compose_data/
+
+# OS specific
+.DS_Store
+Thumbs.db
+
+# ROS2 specific hidden files
+.colcon/
+EOF
